@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Nothing+You+Could+Do&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tabs-font: "Josefin Sans", sans-serif;
+  --headline-font: "Nothing You Could Do", cursive;
+  /* --yellow-headline: #ffd900; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HERO + NAV */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("images/hero_bg2.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+}
+
+section {
+  padding: 3.9rem 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  position: relative;
+}
+
+/* Side Tab Links */
+.side-navbar a {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  left: -132px;
+  transition: 0.3s;
+  text-decoration: none;
+  text-align: left;
+  font-size: 1.9rem;
+  font-family: var(--tabs-font);
+  font-weight: bold;
+  padding: 12px;
+  color: white;
+  text-shadow: 3px 3px 5px #000;
+  border-radius: 0 10px 10px 0;
+  z-index: 1;
+}
+
+.side-navbar .link1 {
+  bottom: 245px;
+  background-color: #4caf50;
+}
+
+.side-navbar .link2 {
+  bottom: 185px;
+  background-color: #2196f3;
+}
+
+.side-navbar .link3 {
+  bottom: 125px;
+  background-color: #f44336;
+}
+
+.side-navbar .link4 {
+  bottom: 65px;
+  background-color: rgb(255, 230, 0);
+}
+
+.side-navbar .link5 {
+  bottom: 5px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.side-navbar a:focus,
+.side-navbar a:hover {
+  left: 0;
+}
+
+/* Image Flip Box */
+.image-box-frame {
+  background-color: #9c9179;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #bfbfbf;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2), 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.image-box {
+  background-color: transparent;
+  width: 280px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.image-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.image-box:hover .image-box-inner {
+  transform: rotateY(180deg);
+}
+
+.image-box-front,
+.image-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* defaults if no image present */
+.image-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.image-box-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* HEADLINE - animated text */
+#animated-headline {
+  position: absolute;
+  max-width: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 2s;
+}
+
+#animated-headline path:nth-child(1) {
+  stroke-dasharray: 365px;
+  stroke-dashoffset: 365px;
+  animation: text-animation 1.25s ease forwards;
+}
+#animated-headline path:nth-child(2) {
+  stroke-dasharray: 139px;
+  stroke-dashoffset: 139px;
+  animation: text-animation 1s ease forwards 0.3s;
+}
+#animated-headline path:nth-child(3) {
+  stroke-dasharray: 59px;
+  stroke-dashoffset: 59px;
+  animation: text-animation 0.5s ease forwards 0.6s;
+}
+#animated-headline path:nth-child(4) {
+  stroke-dasharray: 148px;
+  stroke-dashoffset: 148px;
+  animation: text-animation 0.5s ease forwards 0.5s;
+}
+#animated-headline path:nth-child(5) {
+  stroke-dasharray: 59px;
+  stroke-dashoffset: 59px;
+  animation: text-animation 0.5s ease forwards 0.8s;
+}
+#animated-headline path:nth-child(6) {
+  stroke-dasharray: 417px;
+  stroke-dashoffset: 417px;
+  animation: text-animation 1.1s ease forwards 0.8s;
+}
+#animated-headline path:nth-child(7) {
+  stroke-dasharray: 461px;
+  stroke-dashoffset: 461px;
+  animation: text-animation 1.5s ease forwards 1s;
+}
+#animated-headline path:nth-child(8) {
+  stroke-dasharray: 165px;
+  stroke-dashoffset: 165px;
+  animation: text-animation 0.75s ease forwards 1.2s;
+}
+#animated-headline path:nth-child(9) {
+  stroke-dasharray: 326px;
+  stroke-dashoffset: 326px;
+  animation: text-animation 0.75s ease forwards 1.3s;
+}
+#animated-headline path:nth-child(10) {
+  stroke-dasharray: 193px;
+  stroke-dashoffset: 193px;
+  animation: text-animation 0.8s ease forwards 1.4s;
+}
+#animated-headline path:nth-child(11) {
+  stroke-dasharray: 193px;
+  stroke-dashoffset: 193px;
+  animation: text-animation 0.8s ease forwards 1.4s;
+}
+
+/* ABOUT ME section */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headline {
+  font-family: var(--headline-font);
+  font-size: 3rem;
+}
+.about img {
+  margin: 0 auto;
+  width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* ANIMATIONS */
+@keyframes text-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: black;
+  }
+}
