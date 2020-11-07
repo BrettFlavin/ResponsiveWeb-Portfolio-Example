@@ -64,27 +64,27 @@ section {
   z-index: 1;
 }
 
-.side-navbar .link1 {
+.side-navbar a:nth-child(1) {
   bottom: 245px;
   background-color: #4caf50;
 }
 
-.side-navbar .link2 {
+.side-navbar a:nth-child(2) {
   bottom: 185px;
   background-color: #2196f3;
 }
 
-.side-navbar .link3 {
+.side-navbar a:nth-child(3) {
   bottom: 125px;
   background-color: #f44336;
 }
 
-.side-navbar .link4 {
+.side-navbar a:nth-child(4) {
   bottom: 65px;
   background-color: rgb(255, 230, 0);
 }
 
-.side-navbar .link5 {
+.side-navbar a:nth-child(5) {
   bottom: 5px;
   background-color: rgb(0, 0, 0);
   color: #fff;
@@ -98,7 +98,7 @@ section {
 /* Image Flip Box */
 
 .image-box-frame {
-  background-color: #9c9179;
+  background-color: #b5aa98;
   width: 300px;
   height: 200px;
   margin: 0 auto;
@@ -134,8 +134,6 @@ section {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
-/* defaults if no image present */
 
 .image-box-front {
   background-image: url('images/frameBG.jpg');
